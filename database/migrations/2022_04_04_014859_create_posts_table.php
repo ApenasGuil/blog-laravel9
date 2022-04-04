@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Se deletar o User que criou o post, o Post também é deletado
             $table->string('title');
             $table->string('slug');
+            $table->string('thumb');
             $table->text('content');
             $table->timestamps();
         });
